@@ -40,10 +40,10 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
             </li>
-
-            <!-- Listings in the Navigation Section -->
+            
+            <!-- Exploratory data Analysis in the Navigation Section -->
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for ('listings') }}">Listings</a>
+              <a class="nav-link" href="{{ url_for ('analysis') }}">Exploratory Analysis</a>
             </li>
 
             <!-- Visualizations DropDown Menu in the Navigation Section -->
@@ -52,13 +52,9 @@
               Visualizations
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ url_for ('roomtypeplot') }}">Types of Listings</a>
-                <a class="dropdown-item" href="{{ url_for ('propertytypesplot') }}">Listed Property Types</a>
-                <a class="dropdown-item" href="{{ url_for ('pg_growth') }}">Growth Analysis</a>
-                <a class="dropdown-item" href="{{ url_for ('hoodsavgpricesplot') }}">Average Prices by Neighbourhood</a>
-                <a class="dropdown-item" href="{{ url_for ('ss_ratingsmap') }}">Highly Rated Listings</a>
-                <a class="dropdown-item" href="{{ url_for ('js_pricesmap') }}">Neighbourhood Pricing</a>
-                <a class="dropdown-item" href="{{ url_for ('pg_ratings') }}">Neighbourhood Ratings</a>
+                <a class="dropdown-item" href="{{ url_for ('growth') }}">House Price Changes Over Time</a>
+                <a class="dropdown-item" href="{{ url_for ('pricemap') }}">House Price Distribution</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction') }}">House Price Prediction</a>
               </div>
             </li>
 
@@ -76,6 +72,7 @@
       </nav>
     </div>
     <!-- Navigation Section Ends -->
+
     <!-- Content Section Begins -->
     <div class="container">
       <!-- <div class="row"> -->
@@ -95,15 +92,15 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="title">Types of Listings</div>
-            <a href="{{ url_for ('roomtypeplot') }}">
-            <img class="panel" id="activeimage" src="static/images/roomtypeplot.png" alt="Types of Listings"width="500px", height="300px">
+            <a href="">
+            <img class="panel" id="activeimage" src="" alt=""width="500px", height="300px">
             </a>
         </div>
 
         <div class="col-lg-6">
           <div class="title">Listed Property Types</div>
-            <a href="{{ url_for ('propertytypesplot') }}">
-            <img class="panel" id="activeimage" src="static/images/propertytypesplot.png" alt="Listed Property Types"width="500px", height="300px">
+            <a href="">
+            <img class="panel" id="activeimage" src="" alt=""width="500px", height="300px">
             </a>
         </div>
       </div>
@@ -111,52 +108,20 @@
       <!-- Row 2 for plots 3 & 4 plots begins -->
       <div class="row">
         <div class="col-lg-6">
-          <div class="title">Airbnb Growth in Asheville</div>
-            <a href="{{ url_for ('pg_growth') }}">
-            <img class="panel" id="activeimage" src="static/images/airbnbgrowth.png" alt="Growth Analysis" width="500px", height="300px">
-            </a>
-        </div>
-                
-        <div class="col-lg-6">
-          <div class="title">Average Prices by Neighbourhood</div>
-            <a href="{{ url_for ('hoodsavgpricesplot') }}">
-            <img class="panel" id="activeimage" src="static/images/avgpricesplot.png" alt="Average Price by Neighbourhood"width="500px", height="300px">
-            </a>
-        </div>
-      </div>
-      <!-- Row 2 for plots 3 & 4 plots ends -->
-      <!-- Row 3 for plots 5 & 6 maps begins -->            
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="title">Listings by Rating</div>
-            <a href="{{ url_for ('ss_ratingsmap') }}">
-            <img class="panel" id="activeimage" src="static/images/ratingsmap.PNG" alt="Listings by Rating"width="500px", height="300px">
-            </a>
-        </div>
-                
-        <div class="col-lg-6">
-          <div class="title">Best Neighbourhoods by Price</div>
-            <a href="{{ url_for ('js_pricesmap') }}">
-            <img class="panel" id="activeimage" src="static/images/AshevilleChoropleth.png" target = "_blank" alt="Neighbourhood Prices" width="500px", height="300px" >
-            </a>
-        </div>
-      </div>
-      <!-- Row 3 for plots 5 & 6 maps ends --> 
-      <!-- Row 4 for plots 7 & 8 maps begins -->            
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="title">Best Neighbourhoods by Rating</div>
-            <a href="{{ url_for ('pg_ratings') }}">
-            <img class="panel" id="activeimage" src="static/images/topratedneighborhoods.png" alt="Neighbourhood Ratings"width="500px", height="300px">
+          <div class="title"></div>
+            <a href="">
+            <img class="panel" id="activeimage" src="" alt="Growth Analysis" width="500px", height="300px">
             </a>
         </div>
                 
         <div class="col-lg-6">
           <div class="title"></div>
-            
+            <a href="">
+            <img class="panel" id="activeimage" src="" alt=""width="500px", height="300px">
+            </a>
         </div>
       </div>
-      <!-- Row 4 for plots 5 & 6 maps ends --> 
+      <!-- Row 2 for plots 3 & 4 plots ends -->
     </div>
     <br>
     <br>
@@ -165,7 +130,7 @@
 
     <!-- Footer Section begins -->
     <footer>
-        <div class="footer">Copyright &copy; Data Enthusiasts 2020</div>
+        <div class="footer">Copyright &copy; Machine Learning Enthusiasts 2020</div>
     </footer>
     <!-- Footer Section begins -->
 

@@ -24,10 +24,6 @@
   </head>
 
   <body>
-    <!-- Gramin canvas begins -->
-    <div id="canvas-wrapper" style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; right: 0; left: 0;">
-      <canvas id="granim-canvas" width="1120px" height="250px" style="position: absolute; height: 100%; width: 100%; z-index: -1; background-size: cover; background-position: 0 85%;"></canvas>
-     
       <!-- Navigation Section Begins -->
       <div class="navigation">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,33 +39,29 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
               </li>
-
-              <!-- Listings in the Navigation Section -->
+              
+              <!-- Exploratory data Analysis in the Navigation Section -->
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('listings') }}">Listings</a>
+                <a class="nav-link" href="{{ url_for ('analysis') }}">Exploratory Analysis</a>
               </li>
-
+  
               <!-- Visualizations DropDown Menu in the Navigation Section -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Visualizations
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{ url_for ('roomtypeplot') }}">Types of Listings</a>
-                  <a class="dropdown-item" href="{{ url_for ('propertytypesplot') }}">Listed Property Types</a>
-                  <a class="dropdown-item" href="{{ url_for ('pg_growth') }}">Growth Analysis</a>
-                  <a class="dropdown-item" href="{{ url_for ('hoodsavgpricesplot') }}">Average Prices by Neighbourhood</a>
-                  <a class="dropdown-item" href="{{ url_for ('ss_ratingsmap') }}">Highly Rated Listings</a>
-                  <a class="dropdown-item" href="{{ url_for ('js_pricesmap') }}">Neighbourhood Pricing</a>
-                  <a class="dropdown-item" href="{{ url_for ('pg_ratings') }}">Neighbourhood Ratings</a>
+                  <a class="dropdown-item" href="{{ url_for ('growth') }}">House Price Changes Over Time</a>
+                  <a class="dropdown-item" href="{{ url_for ('pricemap') }}">House Price Distribution</a>
+                  <a class="dropdown-item" href="{{ url_for ('prediction') }}">House Price Prediction</a>
                 </div>
               </li>
-
+  
               <!-- Analysis Methodology in the Navigation Section -->
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for ('methodology') }}">Methodology</a>
               </li>
-
+  
               <!-- Acknowledgements in the Navigation Section -->
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for ('acknowledgements') }}">Acknowledgements</a>
@@ -97,13 +89,13 @@
                 <td scope="row">Created a web application using Python Flask</td>
               </tr>
               <tr>
-                <td scope="row">Deployed the web application on Heroku: <a href="https://waghrayrashi-ashville-airbnb.herokuapp.com/">https://waghrayrashi-ashville-airbnb.herokuapp.com/</a></td>
+                <td scope="row">Deployed the web application on Heroku: <a href="https://rw-housepricepredict.herokuapp.com/">https://rw-housepricepredict.herokuapp.com/</a></td>
               </tr>
               <tr>
                 <td scope="row">Provisioned a PostgreSQL database for the web application</td>
               </tr>
               <tr>
-                <td scope="col"><strong>Source code is available on Github: </strong><a href="https://github.com/waghrayrashi/airbnb_analysis">https://github.com/waghrayrashi/airbnb_analysis</a></td>
+                <td scope="col"><strong>Source code is available on Github: </strong><a href="">https://github.com/</a></td>
               </tr>
             </tbody>
           </table>
@@ -117,17 +109,9 @@
             </thead>
             <tbody>
               <tr>
-                <td scope="row">The dataset for the analysis was sourced from <a href="http://insideairbnb.com/get-the-data.html">Inside Airbnb</a> and consists of:</td>
+                <td scope="row">The datasets for the analysis were sourced from <a href="">Zillow</a> and consists of:</td>
               </tr>
-              <tr>
-                <td scope="row"> - Listings: Details of 2171 Airbnb listings in Asheville with 106 attributes.</td>
-              </tr>
-              <tr>
-                <td scope="row"> - Reviews: Details of reviews given by the guests for listings by listing_id, date, reviewer_id & comment.</td>
-              </tr>
-              <tr>
-                <td scope="row"> - Calendar: Details of available booking times for listings by listing_id, date, availability & price.</td>
-              </tr>
+
             </tbody>
           </table>
           <!-- Datasource explanation ends-->
@@ -175,7 +159,7 @@
                 <td scope="row">Analyzed the data in Python to identify trends and correlations</td>
               </tr>
               <tr>
-                <td scope="row">Developed static charts</td>
+                <td scope="row">Predicted house pricies using ....</td>
               </tr>
             </tbody>
           </table>
@@ -192,7 +176,7 @@
                 <td scope="row">Created a dashboard page with multiple, static and dynamic charts</td>
               </tr>
               <tr>
-                <td scope="row">Created web visualizations using Javascript Libraries <Strong>(Leaflet, Chloropeth, Plotly and Gramin)</Strong></td>
+                <td scope="row">Created web visualizations using Tableau</td>
               </tr>
             </tbody>
           </table>
@@ -203,35 +187,13 @@
         <!-- Project explanation ends-->  
       </div>
       <!-- Content Section ends -->
-    </div>
-    <!-- Gramin canvas ends -->
     
     <!-- Footer Section Begins-->
     <footer>
-        <div class="footer">Copyright &copy; Data Science Enthusiasts 2020</div>
+        <div class="footer">Copyright &copy; Machine Learning Enthusiasts 2020</div>
     </footer>
     <!-- Footer Section Ends-->
     
-    <!-- Granim Javascript -->
-    <script src="static/js/granim.min.js"></script>
-    
-    <!-- Script to create a granim instance begins-->
-    <script>
-      var granimInstance = new Granim({
-          element: '#granim-canvas',
-          name: 'granim',
-          opacity: [1, 1],
-          states : {
-              "default-state": {
-                  gradients: [
-                      ['#834D9B', '#D04ED6'],
-                      ['#1CD8D2', '#93EDC7']
-                  ]
-              }
-          }
-      });
-    </script>
-    <!-- Script to create a granim instance ends-->
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

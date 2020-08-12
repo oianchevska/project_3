@@ -36,26 +36,33 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <!-- List of items in the Navigation section -->
           <ul class="navbar-nav">
-            <!-- Dashboard in the Navigation Section -->
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
-            </li>
             
             <!-- Exploratory data Analysis in the Navigation Section -->
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for ('analysis') }}">Exploratory Analysis</a>
+              <a class="nav-link" href="{{ url_for ('analysis') }}">Data Exploration</a>
+            </li>
+            
+            <!-- Dashboard in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
             </li>
 
             <!-- Visualizations DropDown Menu in the Navigation Section -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Visualizations
+              House Price Predictions
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ url_for ('growth') }}">House Price Changes Over Time</a>
-                <a class="dropdown-item" href="{{ url_for ('pricemap') }}">House Price Distribution</a>
-                <a class="dropdown-item" href="{{ url_for ('prediction') }}">House Price Prediction</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction1bdr') }}">1 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction2bdr') }}">2 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction3bdr') }}">3 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction4bdr') }}">4 Bedroom House Prices</a>
               </div>
+            </li>
+
+            <!-- Conclusions in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('conclusions') }}">Conclusions</a>
             </li>
 
             <!-- Analysis Methodology in the Navigation Section -->
@@ -73,15 +80,126 @@
     </div>
     <!-- Navigation Section Ends -->
 
-    <!--Content Section Begins-->          
+    <!-- Content Section Begins -->
     <div class="container">
-      <br>
-      <h3>Median House Price Analysis</h3>
-      <p>TBD</p>
+      <!-- Row 1 for heading begins -->
+      <div class="row">
+        <!-- Heading box  -->        
+        <div class="col-lg-12">
+          <div class="box">
+            <h4>Exploratory Analysis of House Prices in North Carolina</h4>
+          </div>
+        </div>
+      </div>
+      <!-- Row 1 for heading ends -->
+      <!-- Row 2 for house price variations begins -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="title">I. House Price variations across cities in North Carolina</div>
+            <div>
+              <p>Explain how prices vary across north carolina for 1-4 bedrooms</p>
+              <br>
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">Bedrooms</th>
+                    <th scope="col">Highest Price($)</th>
+                    <th scope="col">Lowest Price($)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>$300,000 - Wilmington</td>
+                    <td>$70,000 - Weldon</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>$300,000 - Wilmington</td>
+                    <td>$70,000 - Weldon</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>$300,000 - Wilmington</td>
+                    <td>$70,000 - Weldon</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>$300,000 - Wilmington</td>
+                    <td>$70,000 - Weldon</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
 
+        <div class="col-lg-6">
+          <a href="">
+          <img class="panel" id="activeimage" src="" alt="Link to Tableau Public"width="500px", height="300px">
+          </a>
+        </div>
+      </div>
+      <!-- Row 2 for house price variations ends -->
+      <!-- Row 3 begins -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="title">II. Correlation between Income and House Prices</div>
+            <div>
+              <p>Explain relationship between income and price</p>
+              <br>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+          <a href="">
+          <img class="panel" id="activeimage" src="" alt="Link to Tableau Public"width="500px", height="300px">
+          </a>
+        </div>
+      </div>
+      <!-- Row 3 ends -->
+      <!-- Row 4 begins -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="title"> III. RTP Analysis</div>
+            <p>RTP analysis points</p>
+            <br>
+        </div>
+
+        <div class="col-lg-6">
+            <div class='tableauPlaceholder' id='viz1597112647140' style='position: relative'>
+              <noscript>
+                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3TestVisualizations&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+              </noscript><object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='Project3TestVisualizations&#47;Sheet1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3TestVisualizations&#47;Sheet1&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en' />
+              </object>
+            </div>                
+            <script type='text/javascript'>                    
+              var divElement = document.getElementById('viz1597112647140');                    
+              var vizElement = divElement.getElementsByTagName('object')[0];                    
+              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+              var scriptElement = document.createElement('script');                    
+              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+              vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+      </div>
+      <!-- Row 4 ends -->
     </div>
-    <!--Content Section Ends-->
-
+    <!-- Content section ends -->
+    <br>
+    <br>
     <!-- Footer Section Begins-->
     <footer>
       <div class="footer">Copyright &copy; Machine Learning Enthusiasts 2020</div>

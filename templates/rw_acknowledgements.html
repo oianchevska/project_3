@@ -36,26 +36,33 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <!-- List of items in the Navigation section -->
           <ul class="navbar-nav">
-            <!-- Dashboard in the Navigation Section -->
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
-            </li>
             
             <!-- Exploratory data Analysis in the Navigation Section -->
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for ('analysis') }}">Exploratory Analysis</a>
+              <a class="nav-link" href="{{ url_for ('analysis') }}">Data Exploration</a>
+            </li>
+            
+            <!-- Dashboard in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
             </li>
 
             <!-- Visualizations DropDown Menu in the Navigation Section -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Visualizations
+              House Price Predictions
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ url_for ('growth') }}">House Price Changes Over Time</a>
-                <a class="dropdown-item" href="{{ url_for ('pricemap') }}">House Price Distribution</a>
-                <a class="dropdown-item" href="{{ url_for ('prediction') }}">House Price Prediction</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction1bdr') }}">1 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction2bdr') }}">2 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction3bdr') }}">3 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction4bdr') }}">4 Bedroom House Prices</a>
               </div>
+            </li>
+
+            <!-- Conclusions in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('conclusions') }}">Conclusions</a>
             </li>
 
             <!-- Analysis Methodology in the Navigation Section -->
@@ -76,14 +83,14 @@
     <!--Content Section Begins-->          
     <div class="container">
       <br>
-      <h3>Thank You</h3>
-      <p>The Machine Learning Enthusiasts acknowledge and thank the instructional team for thier support and inspiration on this project.</p>
+      <h4>Thank You</h4>
+      <p>The Machine Learning Enthusiasts acknowledge and thank the following mentors for their support and inspiration on this project:</p>
       <ul>
         <li>Michael Dinh</li>
         <li>Brianna McKelvey</li>
         <li>Taylor Middlebrooks</li>
       </ul>
-      <h3>Machine Learning Enthusiasts</h3>
+      <h4>Machine Learning Enthusiasts</h4>
       <hr>
       <table class="table table-lg">
         <thead>
@@ -102,12 +109,12 @@
           <tr>
             <th scope="row">Isabel Jamal</th>
             <td><a href="izzydean13@yahoo.com">izzydean13@yahoo.com</a></td>
-            <td><a href="https://github.com/izzydean13">https://github.com/izzydean13</a></td>
+            <td><a href="https://github.com/IsabelJamal95">https://github.com/IsabelJamal95</a></td>
           </tr>
           <tr>
             <th scope="row">Jennifer Borgogno</th>
-            <td><a href="Jdo4508@gmail.com">Jdo4508@gmail.com</a></td>
-            <td><a href="https://github.com/Jdo4508">https://github.com/Jdo4508</a></td>
+            <td><a href="jdo4508@gmail.com">Jdo4508@gmail.com</a></td>
+            <td><a href="https://github.com/jdo4508">https://github.com/jdo4508</a></td>
           </tr>
           <tr>
             <th scope="row">Rashi Waghray</th>
@@ -122,7 +129,7 @@
           <tr>
             <th scope="row">Waleed Ahmed</th>
             <td><a href="contact.waleedahmed@gmail.com">contact.waleedahmed@gmail.com</a></td>
-            <td><a href="https://github.com/waleedahmed">https://github.com/waleedahmed</a></td>
+            <td><a href="https://github.com/waleedxahmed">https://github.com/waleedxahmed</a></td>
           </tr>
         </tbody>
       </table>

@@ -37,6 +37,11 @@
           <!-- List of items in the Navigation section -->
           <ul class="navbar-nav">
             
+            <!-- Analysis Methodology in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('methodology') }}">Methodology</a>
+            </li>
+
             <!-- Exploratory data Analysis in the Navigation Section -->
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for ('analysis') }}">Data Exploration</a>
@@ -65,11 +70,6 @@
               <a class="nav-link" href="{{ url_for ('conclusions') }}">Conclusions</a>
             </li>
 
-            <!-- Analysis Methodology in the Navigation Section -->
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for ('methodology') }}">Methodology</a>
-            </li>
-
             <!-- Acknowledgements in the Navigation Section -->
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for ('acknowledgements') }}">Acknowledgements</a>
@@ -82,6 +82,7 @@
 
     <!-- Content Section Begins -->
     <div class="container">
+      <div class="box">
       <!-- Row 1 for heading begins -->
       <div class="row">
         <!-- Heading box  -->        
@@ -103,99 +104,172 @@
                 <thead>
                   <tr>
                     <th scope="col">Bedrooms</th>
-                    <th scope="col">Highest Price($)</th>
-                    <th scope="col">Lowest Price($)</th>
+                    <th scope="col">Highest Price(USD)</th>
+                    <th scope="col">Lowest Price(USD)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>$300,000 - Wilmington</td>
-                    <td>$70,000 - Weldon</td>
+                    <td>$139,167 - Oak Ridge</td>
+                    <td>$14,934 - Kinston</td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td>$300,000 - Wilmington</td>
-                    <td>$70,000 - Weldon</td>
+                    <td>$603,578 - Wrightsville Beach</td>
+                    <td>$12,608 - Weldon</td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td>$300,000 - Wilmington</td>
-                    <td>$70,000 - Weldon</td>
+                    <td>$867,085 - Wrightsville Beach</td>
+                    <td>$39,491 - Weldon</td>
                   </tr>
                   <tr>
                     <th scope="row">4</th>
-                    <td>$300,000 - Wilmington</td>
-                    <td>$70,000 - Weldon</td>
+                    <td>$1.1M - Wrightsville Beach</td>
+                    <td>$59,988 - Weldon</td>
                   </tr>
                 </tbody>
               </table>
             </div>
         </div>
-
+        <!-- Row 2 right box growth chart begins -->
         <div class="col-lg-6">
-          <a href="">
-          <img class="panel" id="activeimage" src="" alt="Link to Tableau Public"width="500px", height="300px">
-          </a>
+          <div class='tableauPlaceholder' id='viz1597415889586' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3TrianglePricesOverTime&#47;Triangleovertime&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='site_root' value='' />
+              <param name='name' value='Project3TrianglePricesOverTime&#47;Triangleovertime' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3TrianglePricesOverTime&#47;Triangleovertime&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+          <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1597415889586');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='1327px';}
+
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          </script>
         </div>
+        <!-- Row 2 right box growth chart ends -->
       </div>
-      <!-- Row 2 for house price variations ends -->
+      <!-- Row 2 ends -->
       <!-- Row 3 begins -->
       <div class="row">
         <div class="col-lg-6">
           <div class="title">II. Correlation between Income and House Prices</div>
             <div>
-              <p>Explain relationship between income and price</p>
-              <br>
+              <ul>
+                <li>Strong correlation between income and median home price</li>
+                <li>Exception to this correlation appears along the coast (vacation and rental homes)</li>
+                <li>Clusters located in the triangle, triad and greater Charlotte area</li>
+              </ul>
             </div>
         </div>
 
+        <!-- Row 3 right box heatmap begins -->
         <div class="col-lg-6">
-          <a href="">
-          <img class="panel" id="activeimage" src="" alt="Link to Tableau Public"width="500px", height="300px">
-          </a>
+          <div class='tableauPlaceholder' id='viz1597415290933' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3HeatMap&#47;Heatmaps&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='site_root' value='' />
+              <param name='name' value='Project3HeatMap&#47;Heatmaps' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3HeatMap&#47;Heatmaps&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+          <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1597415290933');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) 
+            { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='1427px';}                     
+            
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          </script>
         </div>
+        <!-- Row 3 right box heatmap ends -->
       </div>
       <!-- Row 3 ends -->
       <!-- Row 4 begins -->
       <div class="row">
         <div class="col-lg-6">
           <div class="title"> III. RTP Analysis</div>
-            <p>RTP analysis points</p>
-            <br>
+          <div>
+            <ul>
+              <li>As expected, higher poverty rates are associated with lower household incomes and lower home prices</li>
+              <li>Apex has the highest priced 1 and 2 bedroom median home prices</li>
+              <li>Raleigh zip codes 27605 and 27608 have the highest 3 and 4 bedroom median home prices</li>
+              <li>Durham consistently has the highest poverty rate and lowest median home prices</li>
+            </ul>
+          </div>
         </div>
-
+        <!-- Row 4 right box feature analysis begins -->
         <div class="col-lg-6">
-            <div class='tableauPlaceholder' id='viz1597112647140' style='position: relative'>
-              <noscript>
-                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3TestVisualizations&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
-              </noscript><object class='tableauViz'  style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='Project3TestVisualizations&#47;Sheet1' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3TestVisualizations&#47;Sheet1&#47;1.png' /> 
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='language' value='en' />
-              </object>
-            </div>                
-            <script type='text/javascript'>                    
-              var divElement = document.getElementById('viz1597112647140');                    
-              var vizElement = divElement.getElementsByTagName('object')[0];                    
-              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-              var scriptElement = document.createElement('script');                    
-              scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-              vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-            </script>
+          <div class='tableauPlaceholder' id='viz1597416287924' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Variables&#47;TriangleVariables&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='path' value='views&#47;Project3Variables&#47;TriangleVariables?:language=en&amp;:embed=y&amp;:display_count=y' /> 
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Variables&#47;TriangleVariables&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+          <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1597416287924');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='750px';vizElement.style.maxWidth='950px';vizElement.style.width='100%';vizElement.style.height='887px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='750px';vizElement.style.maxWidth='950px';vizElement.style.width='100%';vizElement.style.height='887px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     
+            
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          </script>
         </div>
+        <!-- Row 4 right box feature analysis ends -->
       </div>
       <!-- Row 4 ends -->
+      </div>
     </div>
     <!-- Content section ends -->
     <br>

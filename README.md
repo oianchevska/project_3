@@ -1,6 +1,7 @@
 # House Value Prediction in North Carolina
 
-
+## Interactive Version of the Analysis
+https://waghrayrashi-houseprices.herokuapp.com/
 
 This project provides information about the data and machine learning tools used in our analysis. 
 Our project aims to use predictive modeling, to project the value of a home over time using factors such as median household income, poverty rate and number of schools in any given Zip Code in the state of North Carolina.

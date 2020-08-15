@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <title>Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  </head>
+
+  <body>
+    
+    <!-- Navigation Section Begins -->
+    <div class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for ('index') }}">Overview</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <!-- List of items in the Navigation section -->
+          <ul class="navbar-nav">
+            
+            <!-- Analysis Methodology in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('methodology') }}">Methodology</a>
+            </li>
+
+            <!-- Exploratory data Analysis in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('analysis') }}">Data Exploration</a>
+            </li>
+            
+            <!-- Dashboard in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('dashboard') }}">Dashboard</a>
+            </li>
+
+            <!-- Visualizations DropDown Menu in the Navigation Section -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              House Price Predictions
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{ url_for ('prediction1bdr') }}">1 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction2bdr') }}">2 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction3bdr') }}">3 Bedroom House Prices</a>
+                <a class="dropdown-item" href="{{ url_for ('prediction4bdr') }}">4 Bedroom House Prices</a>
+              </div>
+            </li>
+
+            <!-- Conclusions in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('conclusions') }}">Conclusions</a>
+            </li>
+
+            <!-- Acknowledgements in the Navigation Section -->
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for ('acknowledgements') }}">Acknowledgements</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Navigation Section Ends -->
+
+    <!-- Content Section Begins -->
+    <div class="container">
+      <div class="row">
+        <!-- Left box  -->        
+        <div class="col-lg-12">
+          <div class="box">
+            <h4>Studying the Effect of Location on House Prices in North Carolina</h4>
+            <hr>
+            <p>This dashboard contains comparative visualizations of the analysis and predictions by number of bedrooms:</p>
+            <ul>
+              <li><strong>Interactive Maps</strong> to view the Average Home Price, ZipCode and City</li> 
+              <li><strong>Predictive Model Visualizations</strong></li> provide detailed explanation of the predictive modeling techniques employed
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Row 1 for 1 BDR begins -->
+      <div class="row">
+        <!-- Row 1 left box for price analysis begins -->
+        <div class="col-lg-6">
+          <div class="title">One Bedroom House Price - Analysis</div>
+          <div class='tableauPlaceholder' id='viz1597417048236' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions1bdrm&#47;1BdrmComp&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='site_root' value='' />
+              <param name='name' value='Project3Comparisions1bdrm&#47;1BdrmComp' />
+              <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions1bdrm&#47;1BdrmComp&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+          <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1597417048236');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     
+            
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+        <!-- Row 1 left box for price analysis ends -->      
+        <!-- Row 1 right box for price prediction begins -->
+        <div class="col-lg-6">
+          <div class="title">One Bedroom House Price - Prediction</div>
+          <figure class="figure">
+            <a href="{{ url_for ('prediction1bdr') }}"><img class="panel" id="activeimage" src="./static/images/LinearRegression_1bdr.png" alt="1 Bedroom house price prediction"width="550px", height="370px"></a>
+          <figcaption class="figure-caption text-center">Logrithmic Distribution (r-square) Scores [Training: 1.0 | Testing: 0.238]</figcaption>
+        </figure>
+        </div>
+        <!-- Row 1 right box for price prediction ends -->
+      </div>
+      <!-- Row 1 for 1 BDR ends -->
+
+      <!-- Row 2 for 2 BDR begins -->
+      <div class="row">
+        <!-- Row 2 left box for price analysis begins -->
+        <div class="col-lg-6">
+          <div class="title">Two Bedroom House Price - Analysis</div>
+          <div class='tableauPlaceholder' id='viz1597418746511' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions2bdrm&#47;2BdromComp&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='site_root' value='' />
+              <param name='name' value='Project3Comparisions2bdrm&#47;2BdromComp' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions2bdrm&#47;2BdromComp&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+            <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1597418746511');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     
+            
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+        <!-- Row 2 left box for price analysis ends -->  
+        <!-- Row 2 right box for price prediction begins -->
+        <div class="col-lg-6">
+          <div class="title">Two Bedroom House Price - Prediction</div>
+          <figure class="figure">
+            <a href="{{ url_for ('prediction2bdr') }}"><img class="panel" id="activeimage" src="./static/images/LinearRegression_2bdr.png" alt="2 Bedroom house price prediction"width="550px", height="370px"></a>
+            <figcaption class="figure-caption text-center">Logrithmic Distribution (r-square) Scores [Training: 0.99 | Testing: 0.379]</figcaption>
+          </figure>
+        </div>
+        <!-- Row 2 right box for price prediction ends -->
+      </div>
+      <!-- Row 2 for 2 BDR ends -->
+
+      <!-- Row 3 for 3 BDR begins -->
+      <div class="row">
+        <!-- Row 3 left box for price analysis begins -->
+        <div class="col-lg-6">
+          <div class="title">Three Bedroom House Price - Analysis</div>
+          <div class='tableauPlaceholder' id='viz1597419858977' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions3bdrm&#47;3BdrmComp&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='site_root' value='' />
+              <param name='name' value='Project3Comparisions3bdrm&#47;3BdrmComp' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions3bdrm&#47;3BdrmComp&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+          <script type='text/javascript'>                    
+          var divElement = document.getElementById('viz1597419858977');                    
+          var vizElement = divElement.getElementsByTagName('object')[0];                    
+          
+          if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+          else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+          else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     
+          
+          var scriptElement = document.createElement('script');                    
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          </script>
+        </div>
+        <!-- Row 3 left box for price analysis ends -->  
+        <!-- Row 3 right box for price prediction begins -->
+        <div class="col-lg-6">
+          <div class="title">Three Bedroom House Price - Prediction</div>
+          <figure class="figure">
+            <a href="{{ url_for ('prediction3bdr') }}"><img class="panel" id="activeimage" src="./static/images/LinearRegression_3bdr.png" alt="3 Bedroom house price prediction"width="550px", height="370px"></a>
+            <figcaption class="figure-caption text-center">Logrithmic Distribution (r-square) Scores [Training: 0.99 | Testing: 0.356]</figcaption>
+          </figure>
+        </div>
+        <!-- Row 3 right box for price prediction ends -->
+      </div>
+      <!-- Row 3 for 3 BDR ends -->
+
+      <!-- Row 4 for 4 BDR begins -->
+      <div class="row">
+        <!-- Row 4 left box for price analysis begins -->
+        <div class="col-lg-6">
+          <div class="title">Four Bedroom House Price - Analysis</div>
+          <div class='tableauPlaceholder' id='viz1597420100215' style='position: relative'>
+            <noscript>
+              <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions4bdrm&#47;4BdrmComp&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+              <param name='embed_code_version' value='3' /> 
+              <param name='site_root' value='' />
+              <param name='name' value='Project3Comparisions4bdrm&#47;4BdrmComp' />
+              <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+              <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project3Comparisions4bdrm&#47;4BdrmComp&#47;1.png' /> 
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en' />
+            </object>
+          </div>                
+          <script type='text/javascript'>                    
+          var divElement = document.getElementById('viz1597420100215');                    
+          var vizElement = divElement.getElementsByTagName('object')[0];                    
+          
+          if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+          else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='1300px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='927px';} 
+          else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     
+          var scriptElement = document.createElement('script');                    
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          </script>
+        </div>
+        <!-- Row 4 left box for price analysis ends -->  
+        <!-- Row 4 right box for price prediction begins -->
+        <div class="col-lg-6">
+          <div class="title">Four Bedroom House Price - Prediction</div>
+          <figure class="figure">
+            <a href="{{ url_for ('prediction4bdr') }}"><img class="panel" id="activeimage" src="./static/images/LinearRegression_4bdr.png" alt="4 Bedroom house price prediction"width="550px", height="370px"></a>
+            <figcaption class="figure-caption text-center">Logrithmic Distribution (r-square) Scores [Training: 1.0 | Testing: -2422017.89]</figcaption>
+          </figure>
+        </div>
+        <!-- Row 4 right box for price prediction ends -->
+      </div>
+      <!-- Row 4 for 4 BDR ends -->
+
+    </div>
+    <!-- Content section ends -->
+<br>
+<br>
+    <!-- Footer Section begins -->
+    <footer>
+        <div class="footer">Copyright &copy; Machine Learning Enthusiasts 2020</div>
+    </footer>
+    <!-- Footer Section begins -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+</html>

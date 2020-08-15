@@ -39,4 +39,3 @@ The results of this study could be improved by incorporating the following:
 Including House features along with location features (Ex: Area of the house, number of bedrooms and bathrooms & others)
 Expanding the set of location features (Ex: Crime rate within the neighborhood, School Ratings, Hospitals etc.)
 Testing other types of predictive models on this data set
-

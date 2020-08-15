@@ -1,5 +1,10 @@
 # House Value Prediction in North Carolina
 
+![Home-Value]( NAR-home-values-mst.jpg)
+
+
+
+
 ## Interactive Version of the Analysis
 https://waghrayrashi-houseprices.herokuapp.com/
 
